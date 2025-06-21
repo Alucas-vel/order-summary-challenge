@@ -22,18 +22,34 @@
       border: 2px solid red;
       border-radius: 15px;
     }
-
+    
     .img-girl {
       width: 100%;
       border-radius: 15px 15px 0 0;
     }
+
+    
+    .plan-container { 
+      display:flex;
+      flex-direction:row ;
+      gap:4;
+    }
+
+    .alineacion-plan{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .alineacion-titulo
+    display:flex
+    justify.content: center
 
     @media (min-width: 1440px) {
       
       .card-container {
         width: 50%;
         margin: 0 auto;
-        border: 2px solid green;
+        border: 2px solid blanchedalmond;
         border-radius: 15px;
       }
     }
@@ -43,21 +59,20 @@
   <div class="card-container"> 
     <img src="./images/illustration-hero.svg" alt="" class="img-girl">
 
-    <h1>
-      Order Summary
-    </h1>
-
-    <p>
-      You can now listen to millions of songs, audiobooks, and podcasts on any 
-      device anywhere you like!
-    </p>
-    
     <div>
-      <img src="./images/icon-music.svg" alt="">
+      <divid class="alineacion-titulo"
+      <h1>Oder sumary </h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like! lucas  </p>
+    </div>
 
-      <div>
-        Annual Plan
-        $59.99/year
+
+    <div class="plan-container"> 
+      <img src="./images/icon-music.svg" alt=""> 
+      
+      <div class="alineacion-plan">
+        <p>Annual Plan</p>
+        <p>$59.99/year</p>
       </div>
 
       <span>
@@ -65,10 +80,12 @@
       </span>
     </div>
 
+
     <button>
       Proceed to Payment
     </button>
     
+    <div> Cancel Order </div>
     <a href="">
       Cancel Order    
     </a>
