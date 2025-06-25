@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Summary Card</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
-      height: 90vh;
+      background-color: #e0e8ff;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,77 +23,112 @@
 
     .card-container {
       width: 90%;
-      margin: 0 auto;
-      border: 2px solid red;
+      max-width: 375px;
+      background-color: white;
       border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
-    
+
     .img-girl {
       width: 100%;
-      border-radius: 15px 15px 0 0;
+      display: block;
     }
 
-    
-    .plan-container { 
-      display:flex;
-      flex-direction:row ;
-      gap:4;
+    .content {
+      padding: 20px;
     }
 
-    .alineacion-plan{
+    .content h1 {
+      font-size: 20px;
+      color: #1f2f56;
+      margin-bottom: 12px;
+    }
+
+    .content p {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+
+    .plan-container {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f7f9ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 24px;
     }
 
-    .alineacion-titulo
-    display:flex
-    justify.content: center
+    .plan-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-    @media (min-width: 1440px) {
-      
-      .card-container {
-        width: 50%;
-        margin: 0 auto;
-        border: 2px solid blanchedalmond;
-        border-radius: 15px;
-      }
+    .plan-info p:first-child {
+      font-weight: bold;
+      color: #1f2f56;
+    }
+
+    .plan-info p:last-child {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .plan-container a {
+      color: #3829e0;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .btn-payment {
+      width: 100%;
+      padding: 15px 0;
+      background-color: #3829e0;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(56, 41, 224, 0.3);
+    }
+
+    .cancel {
+      color: #6b7280;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="card-container"> 
-    <img src="./images/illustration-hero.svg" alt="" class="img-girl">
+  <div class="card-container">
+    <img src="./images/illustration-hero.svg" alt="hero" class="img-girl" />
+    
+    <div class="content">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
 
-    <div>
-      <divid class="alineacion-titulo"
-      <h1>Oder sumary </h1>
-      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
-        device anywhere you like! lucas  </p>
-    </div>
-
-
-    <div class="plan-container"> 
-      <img src="./images/icon-music.svg" alt=""> 
-      
-      <div class="alineacion-plan">
-        <p>Annual Plan</p>
-        <p>$59.99/year</p>
+      <div class="plan-container">
+        <div class="plan-left">
+          <img src="./images/icon-music.svg" alt="icon" />
+          <div class="plan-info">
+            <p>Annual Plan</p>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        <a href="#">Change</a>
       </div>
 
-      <span>
-        Change
-      </span>
+      <button class="btn-payment">Proceed to Payment</button>
+      <div class="cancel">Cancel Order</div>
     </div>
-
-
-    <button>
-      Proceed to Payment
-    </button>
-    
-    <div> Cancel Order </div>
-    <a href="">
-      Cancel Order    
-    </a>
   </div>
 </body>
 </html>
